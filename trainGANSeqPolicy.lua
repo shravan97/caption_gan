@@ -1,3 +1,5 @@
+-- Starting file for training?
+
 require 'torch'
 require 'nn'
 require 'nngraph'
