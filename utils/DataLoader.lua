@@ -7,7 +7,8 @@ local DataLoader = torch.class('DataLoader')
 
 function DataLoader:__init(opt)
 	print('DataLoader loading json file: ', opt.json_file)
-	self.info = misc.readJson(opt.json_file) 
+	self.info = misc.readJson(opt.json_file)
+	-- Is self.info used anywhere ?
 	self.word_size = misc.countKeys(self.info.wtoi)
 	print('word size is ' .. self.word_size)
 	print('DataLoader loading feature h5 file: ', opt.feat_file)
@@ -36,6 +37,7 @@ function DataLoader:__init(opt)
 end
 
 function DataLoader:getDict()
+	-- Is this function used anywhere ?
 	return self.info.itow
 end
 
